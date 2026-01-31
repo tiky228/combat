@@ -1,0 +1,12 @@
+stun:
+  duration_ms: 1200
+block:
+  duration_ms: 900
+  damage_multiplier: 0.3
+dummy:
+  indicator:
+    enabled: true
+    bar: "██████████"
+    height: 2.2
+debug:
+  cancel_real_damage: true

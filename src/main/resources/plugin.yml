@@ -1,0 +1,6 @@
+name: BattlegroundCombat
+main: com.codex.battleground.CombatPlugin
+version: 1.0.0
+api-version: '1.20'
+depend: [PacketEvents, CommandAPI]
+softdepend: [NBTAPI, GuiEngine]
