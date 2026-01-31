@@ -8,35 +8,24 @@ This project targets Java 17 and uses a single-module Maven build.
 mvn -U clean package
 ```
 
-### CommandAPI dependency fallback (offline/local)
+### Local setup for CommandAPI (offline)
 
-The CommandAPI Mojang-mapped artifact is normally resolved from the CodeMC Maven
-repository (see `pom.xml`). If your environment cannot reach that repository,
-install the CommandAPI jar into your local Maven repo and retry the build.
+If you cannot reach the CodeMC Maven repository, install the CommandAPI jar into
+your local Maven cache first. The `-Dfile` path must point to the CommandAPI jar
+on your machine (for example, wherever your server plugins are stored).
 
-**macOS/Linux**
+**Windows (Command Prompt)**
 
-```bash
-mvn install:install-file \
-  -Dfile=plugins/CommandAPI-10.1.2-Mojang-Mapped.jar \
-  -DgroupId=dev.jorel \
-  -DartifactId=commandapi-bukkit-mojang-mapped \
-  -Dversion=10.1.2 \
+```bat
+mvn install:install-file ^
+  -Dfile="C:\server\plugins\CommandAPI-10.1.2-Mojang-Mapped.jar" ^
+  -DgroupId=dev.jorel ^
+  -DartifactId=commandapi-bukkit-mojang-mapped ^
+  -Dversion=10.1.2 ^
   -Dpackaging=jar
 ```
 
-**Windows (PowerShell)**
-
-```powershell
-mvn install:install-file `
-  -Dfile=plugins/CommandAPI-10.1.2-Mojang-Mapped.jar `
-  -DgroupId=dev.jorel `
-  -DartifactId=commandapi-bukkit-mojang-mapped `
-  -Dversion=10.1.2 `
-  -Dpackaging=jar
-```
-
-After installing, run:
+After installing, run the build:
 
 ```bash
 mvn -U clean package
