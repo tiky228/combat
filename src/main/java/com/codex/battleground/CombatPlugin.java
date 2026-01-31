@@ -2,7 +2,7 @@ package com.codex.battleground;
 
 import dev.jorel.commandapi.CommandAPI;
 import dev.jorel.commandapi.CommandAPICommand;
-import dev.jorel.commandapi.CommandAPIConfig;
+import dev.jorel.commandapi.CommandAPIBukkitConfig;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
@@ -19,7 +19,7 @@ public class CombatPlugin extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        CommandAPI.onLoad(new CommandAPIConfig(this)
+        CommandAPI.onLoad(new CommandAPIBukkitConfig(this)
             .verboseOutput(false)
             .silentLogs(true));
     }
