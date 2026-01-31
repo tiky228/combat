@@ -19,10 +19,6 @@
             <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
         <repository>
-            <id>jorel</id>
-            <url>https://repo.jorel.dev/releases/</url>
-        </repository>
-        <repository>
             <id>codemc</id>
             <url>https://repo.codemc.io/repository/maven-public/</url>
         </repository>
