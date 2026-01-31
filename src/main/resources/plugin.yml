@@ -2,5 +2,36 @@ name: BattlegroundCombat
 main: com.codex.battleground.CombatPlugin
 version: 1.0.0
 api-version: '1.20'
-depend: [PacketEvents, CommandAPI]
-softdepend: [NBTAPI, GuiEngine]
+softdepend: [NBTAPI, GuiEngine, PacketEvents]
+commands:
+  combatdummy:
+    description: Manage combat dummies.
+    usage: /combatdummy <spawn|removeNearest>
+    permission: battleground.combatdummy
+    permission-message: You do not have permission to use this command.
+  combatdebug:
+    description: Show combat state debug information.
+    usage: /combatdebug
+    permission: battleground.combatdebug
+    permission-message: You do not have permission to use this command.
+  combatreload:
+    description: Reload BattlegroundCombat configuration.
+    usage: /combatreload
+    permission: battleground.combatreload
+    permission-message: You do not have permission to use this command.
+permissions:
+  battleground.combatdummy:
+    description: Allows managing combat dummies.
+    default: op
+  battleground.combatdummy.spawn:
+    description: Allows spawning combat dummies.
+    default: op
+  battleground.combatdummy.remove:
+    description: Allows removing the nearest combat dummy.
+    default: op
+  battleground.combatdebug:
+    description: Allows viewing combat debug state.
+    default: op
+  battleground.combatreload:
+    description: Allows reloading BattlegroundCombat configuration.
+    default: op
