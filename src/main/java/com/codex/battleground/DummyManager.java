@@ -69,7 +69,7 @@ public class DummyManager {
         villager.setCollidable(false);
         villager.setSilent(true);
         villager.setInvulnerable(false);
-        villager.setCustomName(Component.text("Combat Dummy", NamedTextColor.GRAY));
+        villager.customName(Component.text("Combat Dummy", NamedTextColor.GRAY));
         villager.setCustomNameVisible(false);
         markAsDummy(villager);
 
